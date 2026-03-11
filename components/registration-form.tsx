@@ -10,7 +10,6 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Card, CardContent } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
 import ErrorModal from "@/components/error-modal"
-import Image from "next/image"
 
 const DEFAULT_REFERRAL_ID = "164146" //  Wanessa Kristiny Chagas Faustino
 
@@ -437,11 +436,9 @@ export default function RegistrationForm({ representante }: RegistrationFormProp
         {step === 0 && (
           <>
             <div className="flex justify-center mb-4">
-              <Image
+              <img
                 src="https://drive.google.com/uc?export=view&id=115216f2vwHIh6iG1bUURRtGH8yku8gHp"
                 alt="Federal Associados"
-                width={400}
-                height={200}
                 className="w-full max-w-md h-auto"
               />
             </div>
