@@ -437,7 +437,7 @@ export default function RegistrationForm({ representante }: RegistrationFormProp
           <>
             <div className="flex justify-center mb-4">
               <img
-                src="https://drive.google.com/file/d/115216f2vwHIh6iG1bUURRtGH8yku8gHp/view?usp=sharing"
+                src="https://drive.google.com/uc?export=view&id=115216f2vwHIh6iG1bUURRtGH8yku8gHp"
                 alt="Federal Associados"
                 className="w-full max-w-md h-auto"
               />
