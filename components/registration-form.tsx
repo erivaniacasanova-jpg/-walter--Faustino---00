@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Card, CardContent } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
 import ErrorModal from "@/components/error-modal"
+import Image from "next/image"
 
 const DEFAULT_REFERRAL_ID = "164146" //  Wanessa Kristiny Chagas Faustino
 
@@ -434,11 +435,22 @@ export default function RegistrationForm({ representante }: RegistrationFormProp
     <>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-6">
         {step === 0 && (
-          <div className="text-center mb-2">
-            <p className="text-sm sm:text-base text-gray-700">
-              {"Preencha o formulario abaixo corretamente para ativarmos o seu plano na Federal Associados. Cadastro rapido, sem consulta ao SPC/SERASA e sem fidelidade."}
-            </p>
-          </div>
+          <>
+            <div className="flex justify-center mb-4">
+              <Image
+                src="https://drive.google.com/uc?export=view&id=115216f2vwHIh6iG1bUURRtGH8yku8gHp"
+                alt="Federal Associados"
+                width={400}
+                height={200}
+                className="w-full max-w-md h-auto"
+              />
+            </div>
+            <div className="text-center mb-2">
+              <p className="text-sm sm:text-base text-gray-700">
+                {"Preencha o formulario abaixo corretamente para ativarmos o seu plano na Federal Associados. Cadastro rapido, sem consulta ao SPC/SERASA e sem fidelidade."}
+              </p>
+            </div>
+          </>
         )}
         <StepIndicator />
         <h2 className="text-lg md:text-xl font-semibold text-center text-gray-800">{STEP_TITLES[step]}</h2>
@@ -709,6 +721,14 @@ export default function RegistrationForm({ representante }: RegistrationFormProp
             </Button>
           )}
         </div>
+
+        {step === 5 && (
+          <div className="text-center mt-2">
+            <p className="text-sm text-gray-600">
+              Ao clicar no botão, você será redirecionado para a área de pagamento da taxa associativa, sendo ela o valor proporcional ao plano escolhido por você.
+            </p>
+          </div>
+        )}
       </form>
 
       {/* Popup de processamento */}
